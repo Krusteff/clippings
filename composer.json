@@ -1,0 +1,25 @@
+{
+    "name": "krusteff/clippings",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/",
+            "Application\\": "src/Application",
+            "Domain\\": "src/Domain"
+        }
+    },
+    "authors": [
+        {
+            "name": "Martin Krastev",
+            "email": "martin.krastev@devision.bg"
+        }
+    ],
+    "scripts": {
+        "start": "php -S localhost:8000 -t public/",
+        "codesniff": "./vendor/bin/phpcs --standard=PSR2 src/"
+    },
+    "require": {
+        "ext-xml": "*",
+        "squizlabs/php_codesniffer": "^3.6"
+    }
+}
