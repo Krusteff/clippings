@@ -32,6 +32,7 @@ class CustomerService
 
     /**
      * @param string $name
+     * @param string $vatNumber
      *
      * @return Customer
      */
