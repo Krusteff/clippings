@@ -16,6 +16,10 @@ Run `composer codesniff` to check the code
 
 Note: Only the enum file does not meet the PSR-2 coding standards because it's kinda new :)
 
+## Code coverage
+
+Run ``
+
 ### Not covered & known mistakes
 
 - No limit on the files' characteristics. Basically exploitable code but for dev purpose works as a charm :)

@@ -22,7 +22,12 @@
     ],
     "scripts": {
         "start": "php -S localhost:8000 -t public/",
-        "codesniff": "./vendor/bin/phpcs --standard=PSR2 src/"
+        "codesniff": "./vendor/bin/phpcs --standard=PSR2 src/",
+        "test": " ./vendor/bin/phpunit",
+        "test-coverage": [
+            "@putenv XDEBUG_MODE=coverage",
+            "@test --coverage-html tests/coverage/html"
+        ]
     },
     "require": {
         "ext-xml": "*",
