@@ -7,21 +7,11 @@ namespace Domain;
  *
  * @author Martin Krastev <martin.krastev@devision.bg>
  */
-class Currency
+class Currency extends BaseEntity
 {
     private string $code;
 
     private float $multiplier;
-
-    /**
-     * Currency constructor.
-     *
-     * @param array $data
-     */
-    public function __construct(array $data = [])
-    {
-        $this->fromArray($data);
-    }
 
     /**
      * @param array $data

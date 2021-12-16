@@ -6,12 +6,9 @@ namespace Domain;
  * Class Document
  *
  * @author Martin Krastev <martin.krastev@devision.bg>
- * @package Domain
  */
-class Document
+class Document extends BaseEntity
 {
-    private string $vatNumber;
-
     private string $number;
 
     private float $total;
@@ -25,25 +22,12 @@ class Document
     private Currency $currency;
 
     /**
-     * Document constructor.
-     *
-     */
-    public function __construct(array $data = [])
-    {
-        $this->fromArray($data);
-    }
-
-    /**
      * @param array $data
      *
      * @return $this
      */
     public function fromArray(array $data = []): Document
     {
-        if (key_exists('vatNumber', $data)) {
-            $this->setVatNumber($data['vatNumber']);
-        }
-
         if (key_exists('number', $data)) {
             $this->setNumber($data['number']);
         }
@@ -67,26 +51,6 @@ class Document
         if (key_exists('currency', $data) && $data['currency'] instanceof Currency) {
             $this->setCurrency($data['currency']);
         }
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getVatNumber(): string
-    {
-        return $this->vatNumber;
-    }
-
-    /**
-     * @param string $vatNumber
-     *
-     * @return Document
-     */
-    public function setVatNumber(string $vatNumber): Document
-    {
-        $this->vatNumber = $vatNumber;
 
         return $this;
     }

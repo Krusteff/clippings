@@ -1,10 +1,9 @@
 # Clippings
-This app is 
 
 ## Requirements
 
 - PHP 8.1 
-- PHP extensions - xml
+- PHP extensions - xml, mbstring
 
 ## Run
 
@@ -15,4 +14,17 @@ Then open `localhost:8000` in browser and test the app as described in the serve
 
 Run `composer codesniff` to check the code
 
-Note: Only the enum file does not meet the PSR-2 coding standarts because it's kinda new :)
+Note: Only the enum file does not meet the PSR-2 coding standards because it's kinda new :)
+
+
+### Notes
+
+#### Not covered
+
+- Adding multiple currencies with multiplier 1 (default ones)
+- No limit on files
+
+#### Known mistakes
+
+- App class is responsible for multiple things. Incorrect.
+- Validation mechanism not the best.

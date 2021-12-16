@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<form method="post" enctype="multipart/form-data">
+  Currencies*: <input type="text" name="currencies"> (example: BGN:1,USD:0.58,EUR:0.51,GBP:0.43)<br/>
+  Output currency*: <input type="text" name="outputCurrency"> (example: BGN)<br/>
+  Customer (VAT number): <input type="text" name="specificCustomerVatNumber"> (example: 1234567890)<br/>
+  File: <input type="file" name="data"><br/>
+  <input type="submit" value="Submit" name="submit">
+</form>
+<p>
+  Notes:<br/>
+<ul>
+  <li>If customer is provided and found the result will show only his invoices</li>
+  <li>If the file contains any currency that is not provided with multiplier it will be skipped</li>
+  <li>The file template and format MUST be followed <a href="example.csv">here</a></li>
+</ul>
+</p>
+</body>
+</html>

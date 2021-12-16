@@ -7,24 +7,16 @@ namespace Domain;
  *
  * @author Martin Krastev <martin.krastev@devision.bg>
  */
-class Customer
+class Customer extends BaseEntity
 {
     private string $name;
+
+    private string $vatNumber;
 
     /**
      * @var Document[]
      */
     private array $documents = [];
-
-    /**
-     * Customer constructor.
-     *
-     * @param array $data
-     */
-    public function __construct(array $data = [])
-    {
-        return $this->fromArray($data);
-    }
 
     /**
      * @param array $data
@@ -35,6 +27,10 @@ class Customer
     {
         if (key_exists('name', $data)) {
             $this->setName($data['name']);
+        }
+
+        if (key_exists('vatNumber', $data)) {
+            $this->setVatNumber($data['vatNumber']);
         }
 
         return $this;
@@ -56,6 +52,26 @@ class Customer
     public function setName(string $name): Customer
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getVatNumber(): string
+    {
+        return $this->vatNumber;
+    }
+
+    /**
+     * @param string $vatNumber
+     *
+     * @return Customer
+     */
+    public function setVatNumber(string $vatNumber): Customer
+    {
+        $this->vatNumber = $vatNumber;
 
         return $this;
     }

@@ -5,7 +5,7 @@ namespace Application;
 use Domain\Currency;
 
 /**
- * Class CurrencyService
+ * Class CurrencyServiceTest
  *
  * @author Martin Krastev <martin.krastev@devision.bg>
  */
@@ -23,7 +23,7 @@ class CurrencyService
     public function getDefault(): ?Currency
     {
         foreach ($this->currencies as $currency) {
-            if ($currency->getMultiplier() === (float)1) {
+            if ($currency->getMultiplier() === (float) 1) {
                 return $currency;
             }
         }

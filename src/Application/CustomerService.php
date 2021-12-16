@@ -35,24 +35,24 @@ class CustomerService
      *
      * @return Customer
      */
-    public function findByNameOrCreate(string $name): Customer
+    public function findOrCreate(string $name, string $vatNumber): Customer
     {
-        if (($foundCustomer = $this->findByName($name)) === null) {
-            return $this->create(['name' => $name]);
+        if (($foundCustomer = $this->findByVatNumber($vatNumber)) === null) {
+            return $this->create(['name' => $name, 'vatNumber' => $vatNumber]);
         }
 
         return $foundCustomer;
     }
 
     /**
-     * @param string $name
+     * @param string $vatNumber
      *
      * @return Customer|null
      */
-    public function findByName(string $name): ?Customer
+    public function findByVatNumber(string $vatNumber): ?Customer
     {
         foreach ($this->customers as $customer) {
-            if ($customer->getName() === $name) {
+            if ($customer->getVatNumber() === $vatNumber) {
                 return $customer;
             }
         }
