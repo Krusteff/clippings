@@ -1,5 +1,5 @@
 # Clippings
-
+Task description may be found [here](https://github.com/clippings/documents-calculation-challenge/blob/master/README.md).
 ## Requirements
 
 - PHP 8.1
