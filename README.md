@@ -18,9 +18,9 @@ Note: Only the enum file does not meet the PSR-2 coding standards because it's k
 
 ## Code coverage
 
-Run ``
+Run `composer test-coverage` and open file `tests/coverage/html/index.html` in browser
 
-### Not covered & known mistakes
+## Not covered & known mistakes
 
 - No limit on the files' characteristics. Basically exploitable code but for dev purpose works as a charm :)
 
